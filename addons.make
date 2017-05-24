@@ -1,0 +1,2 @@
+ofxGifDecoder-master
+ofxGui

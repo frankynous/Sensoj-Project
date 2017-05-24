@@ -1,10 +1,6 @@
 #pragma once
 #include "ofMain.h"
-//#include "ofxGui.h"
-#include "asteroid.h"
-#include "asteroidsRain.h"
-#include "stars.h"
-#include "atomGas.h"
+#include "level1_StarsTravel.h"
 
 class ofApp : public ofBaseApp{
 
@@ -13,45 +9,7 @@ class ofApp : public ofBaseApp{
 		void update();
 		void draw();
 
-		//asteroid asteroid;
-		asteroidsRain rain;
-		asteroidsRain rain2;
-
-		stars stars1;
-		stars stars2;
-		stars stars3;
-		stars stars4;
-		stars stars5;
-
-		float startTime;
-		bool timerEnd;
-		ofParameter<float> endTime1;
-		ofParameter<float> endTime2;
-		ofParameter<float> endTime3;
-		ofParameter<float> endTime4;
-		ofParameter<float> endTime5;
-		ofParameter<float> endTime6;
-		ofParameter<float> timer;
-
-		ofImage planet1;
-		ofImage planet2;
-		ofImage planet3;
-		ofParameter<float> planet1X;
-		ofParameter<float> planet1Y;
-		ofParameter<float> planet1Size;
-		ofParameter<float> planet2X;
-		ofParameter<float> planet2Y;
-		ofParameter<float> planet2Size;
-		ofParameter<float> planet3X;
-		ofParameter<float> planet3Y;
-		ofParameter<float> planet3Size;
-
-		vector<atomGas> gas;
-
-		ofImage ship;
-		ofParameter<float> shipX;
-		ofParameter<float> shipY;
-		ofParameter<float> shipSize;
+		level1_StarsTravel starsTravel;
 
 		void keyPressed(int key);
 		void keyReleased(int key);

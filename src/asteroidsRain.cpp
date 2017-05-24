@@ -27,3 +27,10 @@ void asteroidsRain::rainDraw()
 	}	
 	return;
 }
+
+void asteroidsRain::collision(float xRain, float yRain)
+{
+	for (int i = 0; i<10; i++) {
+		asteroids[i].collision(xRain, yRain);
+	}
+}

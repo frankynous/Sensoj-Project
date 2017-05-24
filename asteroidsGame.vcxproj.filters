@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGifDecoder-master\src\ofxGifDecoder.cpp">
+      <Filter>addons\ofxGifDecoder-master\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGifDecoder-master\src\ofxGifFile.cpp">
+      <Filter>addons\ofxGifDecoder-master\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGifDecoder-master\src\ofxGifFrame.cpp">
+      <Filter>addons\ofxGifDecoder-master\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxBaseGui.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxButton.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxGuiGroup.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxLabel.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxPanel.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSlider.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\asteroid.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\asteroidsRain.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\atomGas.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stars.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="level1_StarsTravel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="galaxy.cpp" />
+    <ClCompile Include="SensojShip.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxGifDecoder-master">
+      <UniqueIdentifier>{D8A15D83-42C5-6086-21CF-CC21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxGifDecoder-master\src">
+      <UniqueIdentifier>{3954CFA3-8B78-6333-E382-91B1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxGui">
+      <UniqueIdentifier>{4F2A59AF-5F4E-704B-D067-EC13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxGui\src">
+      <UniqueIdentifier>{645E9533-4DCD-6179-1CDF-CB65}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGifDecoder-master\src\ofxGifDecoder.h">
+      <Filter>addons\ofxGifDecoder-master\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGifDecoder-master\src\ofxGifFile.h">
+      <Filter>addons\ofxGifDecoder-master\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGifDecoder-master\src\ofxGifFrame.h">
+      <Filter>addons\ofxGifDecoder-master\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxBaseGui.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxButton.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxGui.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxGuiGroup.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxLabel.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxPanel.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSlider.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\asteroid.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\asteroidsRain.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\atomGas.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stars.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="level1_StarsTravel.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="galaxy.h" />
+    <ClInclude Include="SensojShip.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
+</Project>

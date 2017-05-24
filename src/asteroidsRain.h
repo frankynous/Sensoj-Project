@@ -8,10 +8,7 @@ public:
 	void rainSetup();
 	void rainUpdate();
 	void rainDraw();
-
-	ofParameter<float> posXstar;
-	ofParameter<float> posYstar;
-	ofParameter<float> sizeStar;
+	void collision(float xRain, float yRian);
 
 	vector<asteroid> asteroids;
 };
