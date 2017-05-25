@@ -6,22 +6,23 @@ void SensojShip::setup()
 	shipCrashed.load("nave_x.png");
 	shipSize = 100;
 	fade = 255;
-	hit = 0;
+	crash = 0;
 }
 
 void SensojShip::update()
 {
-
+	shipX = ofGetMouseX() - ofGetWidth() / 2;
+	shipY = ofGetMouseY() - ofGetHeight() / 2;
 }
 
 void SensojShip::draw()
 {
-	shipX = ofGetMouseX() - ofGetWidth() / 2;
-	shipY = ofGetMouseY() - ofGetHeight() / 2;
-
-	if (hit <= 0)
+	if (rock.hit <= 0)
 	{
+		fade = 255;
+		ofSetColor(255, 255, 255, fade);
 		ship.draw(shipX - (shipSize / 2), shipY - (shipSize / 2), shipSize, shipSize);
+		ofSetColor(255, 255, 255, 255);
 	}
 	else
 	{
@@ -29,13 +30,6 @@ void SensojShip::draw()
 		ofSetColor(255, 255, 255, fade);
 		shipCrashed.draw(shipX - (shipSize / 2), shipY - (shipSize / 2), shipSize, shipSize);
 		ofSetColor(255, 255, 255, 255);
-	}
-}
-
-void SensojShip::collision(float xShip, float yShip)
-{
-	if (ofDist(xShip, yShip, shipX, shipY) < 10) {
-		hit = 1;
 	}
 
 }

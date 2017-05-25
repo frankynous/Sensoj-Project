@@ -1,6 +1,4 @@
-﻿  level1_StarsTravel.cpp
-  main.cpp
-  ofApp.cpp
+﻿  ofApp.cpp
   asteroidsGame.vcxproj -> D:\Openframeworks\of_v0.9.8_vs_release\apps\myApps\asteroidsGame\bin\asteroidsGame_debug.exe
   asteroidsGame.vcxproj -> bin\asteroidsGame_debug.pdb (Full PDB)
   

@@ -24,8 +24,7 @@ void asteroidsRain::rainDraw()
 	{
 		asteroids.push_back(asteroid());
 		asteroids[i].asShape();
-	}	
-	return;
+	}
 }
 
 void asteroidsRain::collision(float xRain, float yRain)

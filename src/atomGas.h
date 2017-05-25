@@ -6,19 +6,19 @@
 class atomGas
 {
 public:
-	atomGas();
-	~atomGas();
-
 	void setup();
 	void update();
 	void draw();
+	void collision(float xAt, float yAt);
 
-	//ofxGifDecoder decoder;
-	//ofxGifFile atom;
+	ofSoundPlayer gasgotsound;
 
 	ofImage atom;
 	ofParameter<float> atomX;
 	ofParameter<float> atomY;
 	ofParameter<float> atomSize;
+	ofParameter<float> fade;
+	ofParameter<int> hit;
+	ofParameter<int> counter;
 };
 

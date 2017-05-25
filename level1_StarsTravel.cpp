@@ -3,20 +3,33 @@
 //--------------------------------------------------------------
 void level1_StarsTravel::setup() {
 	ofBackground(0);
+	ofHideCursor();
 
+	backSound1.load("backsound1.mp3");
+	narration1.load("narration1.mp3");
+	gasdownsound.load("gasdown.mp3");
+	
+	backSound1.setLoop(true);
+	backSound1.play();
+	
 	backgStars.setup();
 
 	endTime5 = 8000;
 	endTime6 = 16000;
-	gasTime = 30000;
+	gasTime = 60000;
 	timerEnd = false;
 	startTime = ofGetElapsedTimeMillis();
+	counter = 0;
+	resultado = 0;
+
+	gasLevel.load("gas_level.png");
+	gasLevelSizeW = 200;
+	gasLevelSizeH = gasLevelSizeW / 3;
+	gasLevelX = ofGetWidth() / 2 - (gasLevelSizeW + 20);
+	gasLevelY = ofGetHeight() / 2 - (gasLevelSizeH + 47);
 
 	rain.rainSetup();
-	//rain2.rainSetup();
-
-	rocaX = roca.posX;
-	rocaY = roca.posY;
+	rain2.rainSetup();
 
 	for (float i = 0; i < 3; i++)
 	{
@@ -24,13 +37,8 @@ void level1_StarsTravel::setup() {
 		gas[i].setup();
 	}
 
-	gasLevel.load("gas_level.png");
-	gasLevelSizeW = 200;
-	gasLevelSizeH = gasLevelSizeW / 3;
-	gasLevelX = ofGetWidth()/2 - (gasLevelSizeW + 20);
-	gasLevelY = ofGetHeight()/2 - (gasLevelSizeH + 47);
-
 	shipFlay.setup();
+	narration1.play();
 }
 
 //--------------------------------------------------------------
@@ -44,7 +52,7 @@ void level1_StarsTravel::update() {
 	}
 
 	if (timer >= endTime6) {
-		//rain2.rainUpdate();
+		rain2.rainUpdate();
 		for (float i = 0; i < 3; i++)
 		{
 			gas.push_back(atomGas());
@@ -53,6 +61,13 @@ void level1_StarsTravel::update() {
 	}
 
 	shipFlay.update();
+
+	if (backgStars.hit > 0)
+	{
+		resultado = 1;
+		std::cout << "Resultado: " << resultado << endl;
+	}
+
 }
 
 //--------------------------------------------------------------
@@ -66,11 +81,18 @@ void level1_StarsTravel::draw() {
 	}
 
 	if (timer >= endTime6) {
-		//rain2.rainDraw();
+		rain2.rainDraw();
 		for (float i = 0; i < 3; i++)
 		{
 			gas.push_back(atomGas());
 			gas[i].draw();
+		}
+	}
+
+	for (int i = 0; i < 3; i++)
+	{
+		if (gas[i].hit > 0) {
+			gasTime = gasTime + 1000;
 		}
 	}
 
@@ -79,6 +101,13 @@ void level1_StarsTravel::draw() {
 		barGreen = ofMap(timer, gasTime, 0, 0, 255);
 		barRed = ofMap(timer, 0, gasTime, 0, 255);
 	}
+	
+	if (timer >= gasTime/2 && counter == 0)
+	{
+		gasdownsound.play();
+		counter = 1;
+	}
+
 	barBlue = 0;
 	ofSetColor(barRed, barGreen, barBlue);
 	ofDrawRectangle(gasLevelX + 47, gasLevelY + 20, barW, 20);
@@ -86,22 +115,18 @@ void level1_StarsTravel::draw() {
 	gasLevel.draw(gasLevelX, gasLevelY, gasLevelSizeW, gasLevelSizeH);
 
 	rain.collision(shipFlay.shipX, shipFlay.shipY);
-	//rain2.collision(shipFlay.shipX, shipFlay.shipY);
+	rain2.collision(shipFlay.shipX, shipFlay.shipY);
+
+	rock.collision(shipFlay.shipX, shipFlay.shipY);
+
+	for (int i = 0; i < 3; i++)
+	{
+		gas[i].collision(shipFlay.shipX, shipFlay.shipY);
+	}
+
+	backgStars.collision(shipFlay.shipX, shipFlay.shipY);
 
 	shipFlay.draw();
-
-	shipFlay.collision(rocaX, rocaY);
-	
-	/*if (ofDist(shipFlay.shipX, shipFlay.shipY, roca.posX, roca.posY) < 10) {
-		ofSetColor(255, 255, 255, 10);
-		shipFlay.draw();
-		ofSetColor(255, 255, 255, 255);
-	}
-	else
-	{
-		ofSetColor(255, 255, 255, 255);
-		shipFlay.draw();
-	}*/
 }
 
 //--------------------------------------------------------------

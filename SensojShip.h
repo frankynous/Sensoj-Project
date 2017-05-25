@@ -1,5 +1,7 @@
 #pragma once
 #include "ofMain.h"
+#include "asteroid.h"
+#include "asteroidsRain.h"
 
 class SensojShip
 {
@@ -7,7 +9,9 @@ public:
 	void setup();
 	void update();
 	void draw();
-	void collision(float xShip, float yShip);
+
+	asteroid rock;
+	asteroidsRain rocks;
 
 	ofImage ship;
 	ofImage shipCrashed;
@@ -15,6 +19,6 @@ public:
 	ofParameter<float> shipY;
 	ofParameter<float> shipSize;
 	ofParameter<float> fade;
-	ofParameter<int> hit;
+	ofParameter<int> crash;
 };
 

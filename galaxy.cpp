@@ -110,3 +110,12 @@ void galaxy::draw() {
 	planet2.draw(planet2X, planet2Y, planet2Size, planet2Size);
 	planet1.draw(planet1X, planet1Y, planet1Size, planet1Size);
 }
+
+void galaxy::collision(float Xp, float Yp)
+{
+	if (ofDist(Xp, Xp, planet1X, planet1Y) < planet1Size) {
+		hit = 1;
+	}
+
+	std::cout << "Collision Planeta: " << hit << endl;
+}

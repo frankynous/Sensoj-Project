@@ -61,8 +61,12 @@
     <ClCompile Include="level1_StarsTravel.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="galaxy.cpp" />
-    <ClCompile Include="SensojShip.cpp" />
+    <ClCompile Include="galaxy.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="SensojShip.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -142,8 +146,12 @@
     <ClInclude Include="level1_StarsTravel.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="galaxy.h" />
-    <ClInclude Include="SensojShip.h" />
+    <ClInclude Include="SensojShip.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="galaxy.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

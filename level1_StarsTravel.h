@@ -15,34 +15,38 @@ public:
 	void draw();
 
 	galaxy backgStars;
-
-	asteroid roca;
-	ofParameter<float> rocaX;
-	ofParameter<float> rocaY;
-
+	asteroid rock;
 	asteroidsRain rain;
-	//asteroidsRain rain2;
+	asteroidsRain rain2;
 	SensojShip shipFlay;
+
+	ofSoundPlayer backSound1;
+	ofSoundPlayer narration1;	
+	ofSoundPlayer gasdownsound;
+	ofSoundPlayer landingsound;
 
 	ofParameter<float> endTime5;
 	ofParameter<float> endTime6;
+	ofParameter<float> timer;
 	float startTime;
 	bool timerEnd;
-	ofParameter<float> timer;
-	
+	ofParameter<int> counter;
+	ofParameter<int> fade;
+	ofParameter<int> resultado;
+
+	vector<atomGas> gas;
 	ofParameter<float> gasTime;
 	ofParameter<float> barW;
 	ofParameter<float> barRed;
 	ofParameter<float> barGreen;
 	ofParameter<float> barBlue;
 
-	vector<atomGas> gas;
-
 	ofImage gasLevel;
 	ofParameter<float> gasLevelX;
 	ofParameter<float> gasLevelY;
 	ofParameter<float> gasLevelSizeW;
 	ofParameter<float> gasLevelSizeH;
+	
 
 	void keyPressed(int key);
 	void keyReleased(int key);

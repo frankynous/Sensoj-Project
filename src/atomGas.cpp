@@ -1,22 +1,14 @@
 #include "atomGas.h"
 
-atomGas::atomGas()
-{
-}
-
-
-atomGas::~atomGas()
-{
-}
-
 void atomGas::setup() {
-	//decoder.decode("energy.gif");
-	//atom = decoder.getFile();
+	gasgotsound.load("gasgot.mp3");
 
-	atom.load("energy.gif");
+	atom.load("gas.gif");
 	atomX = ofRandom(-100, 100);
 	atomY = ofRandom(-100, 100);
-	atomSize = 5;
+	atomSize = 20;
+	hit = 0;
+	counter = 0;
 }
 
 void atomGas::update() {
@@ -68,8 +60,34 @@ void atomGas::update() {
 }
 
 void atomGas::draw() {
-	//float normalX = float(ofGetMouseX()) / ofGetWidth();
-	//atom.drawFrame(normalX * atom.getNumFrames(), 200, 200);
 
-	atom.draw(atomX,atomY,atomSize,atomSize);
+	if (hit <= 0)
+	{
+		fade = 255;
+		ofSetColor(255, 255, 255, fade);
+		atom.draw(atomX, atomY, atomSize, atomSize);
+		ofSetColor(255, 255, 255, 255);
+	}
+	else
+	{
+		if (counter == 0)
+		{
+			gasgotsound.play();
+			counter = 1;
+		}
+
+		fade--;
+		ofSetColor(255, 255, 255, fade);
+		atom.draw(atomX, atomY, atomSize, atomSize);
+		ofSetColor(255, 255, 255, 255);
+	}
+}
+
+void atomGas::collision(float xAt, float yAt)
+{
+	if (ofDist(xAt, yAt, atomX, atomY) < atomSize) {
+		hit = 1;
+	}
+
+	std::cout << "Collision Gas: " << hit << endl;
 }

@@ -11,6 +11,7 @@ public:
 	void setup();
 	void update();
 	void draw();
+	void collision(float Xp, float Yp);
 
 	stars stars1;
 	stars stars2;
@@ -30,6 +31,7 @@ public:
 	ofParameter<float> planet3X;
 	ofParameter<float> planet3Y;
 	ofParameter<float> planet3Size;
+	ofParameter<int> hit;
 
 	float startTime;
 	bool timerEnd;
